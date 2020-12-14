@@ -63,13 +63,13 @@ $ .\instantiate-container.bat
 
 #### Installing Visual Studio Code and Enabling Container Interaction
 
-Visual Studio Code is a code editor that has an extention for mounting on running containers. You can download VS Code for your machine here: https://code.visualstudio.com/
+Visual Studio Code is a code editor that has an extension for mounting on running containers. You can download VS Code for your machine here: https://code.visualstudio.com/
 
-Once installed open up a VS Code Window and install the `Remote - Containers` Extension by selecting `Extensions` (four squares icon) on the left pane then searching for `Remote - Containers`. Click the install button and it will reload your window. 
+Once installed, open up a VS Code Window and install the `Remote - Containers` Extension by selecting `Extensions` (four squares icon) on the left pane then searching for `Remote - Containers`. Click the install button and it will reload your window. 
 
 Next you must attach to the running container so ensure that you've completed the above steps are currently running the Docker container. Press `F1` to bring up the Command menu and search for `Attach to Running Container...` and select it. If working correctly the `footest` container should pop up and you can select it. Doing so will open a new window and in the bottom left corner in green it should read `Container footest-img:latest...`
 
-To open the directory you can open the directory container using `File` -> `Open Folder` -> `/repo`. You can run commands in the terminal using `Terminal` -> `New Terminal`
+To open the directory, you can open the directory container using `File` -> `Open Folder` -> `/repo`. You can run commands in the terminal using `Terminal` -> `New Terminal`
 
 ## Step 2: 15 Minutes Before the Scheduled Test time
 
