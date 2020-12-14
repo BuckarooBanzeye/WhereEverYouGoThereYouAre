@@ -4,11 +4,11 @@ Just remember, wherever you go, there you are.
 
 ## Overview
 
-Welcome to our test site. The test contained herein have a simple objective: geting to know you, your style of coding, and breath of your developer knowledge.
+Welcome to our test site. The test contained herein have a simple objective: getting to know you, your style of coding, and breath of your developer knowledge.
 
 #### Why You Are here
 
-Our HR adminstrator will have directed you to this github site prior your test date in order to have you perform some initial setup work before we begin the test. We usually like to give you a day or two before the actual test to prep the Docker container. Please have the Docker container installed and ready to go before the test. Depending on your machine this effort could take a hour or more to install. The installation is automatic and you will not be required to attended.
+Our HR administrator will have directed you to this github site prior your test date in order to have you perform some initial setup work before we begin the test. We usually like to give you a day or two before the actual test to prep the Docker container. Please have the Docker container installed and ready to go before the test. Depending on your machine this effort could take a hour or more to install.
 
 Currently we support Microsoft Windows 10 and Linux although we believe the Linux scripts should also work on Mac.
 
@@ -20,15 +20,32 @@ The test will be conducted over Microsoft Teams. You will be expected to share y
 
 #### What Happens When The Test is Done
 
-If there is time left over, please feel free to engage the test adminstrator with questions you may have about the work, environment or technology. In the `Test Instruction` we will direct you have to save your work and how to submit it to us.
+If there is time left over, please feel free to engage the test administrator with questions you may have about the work, environment or technology. In the `Test Instruction` we will direct you have to save your work and how to submit it to us.
 
 ## Step 1: When You Get the Test Invite Do the Following  
 
 Give yourself enough time to install Docker on your machine. Once Docker is installed, follow the instructions for installing the Test Image and Container.
 
-#### Prerequists:
+#### Prerequisites:
 
   1. Have Docker installed on your machine. Use the Docker website to do the install.
+  2. Install `Visual Studio Code` with Docker integration (instructions below) or use your preferred editor.
+
+#### Windows 10: Installing Docker
+
+Follow the instructions for installation laid out here: https://docs.docker.com/docker-for-windows/
+
+This requires installing Docker Desktop. After installing and restarting your machine, Docker Desktop may prompt you with an incomplete setup due to `WSL 2`. If you already have Docker running on your machine with this feature enabled then it should not pose any problems. However, this feature is not necessary for the purpose of the test. 
+
+To disable setting up Docker using `WSL 2` navigate to the Docker whale icon on the toolbar (potentially under Hidden Icons), and right-click and select `Settings`. Under the `General` heading deselect the option named `Use the WSL 2 based engine`. In lieu of using `WSL 2` you must enable `Hyper-V Virtualization` if it is not already enabled. The instructions to do so are located here: https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
+
+You can verify your installation by running `docker --version` in an Administrator PowerShell.
+
+##### Sharing Access to a directory
+
+If you already had Docker running using `WSL 2` then you do not need to complete this step.
+
+To grant permission to Docker to map the appropriate directory to the container you must navigate to the Docker whale icon on the toolbar (potentially under Hidden Icons), and right-click and select `Settings`. Under `Resources` then `File Sharing` add this directory using the `+` icon.
 
 #### Linux: Building the Test Container
 
@@ -41,7 +58,18 @@ $ ./run-azul3d-test.sh
 #### Windows 10: Building the Test Container
 
 ```bash
+$ .\instantiate-container.bat
 ```
+
+#### Installing Visual Studio Code and Enabling Container Interaction
+
+Visual Studio Code is a code editor that has an extention for mounting on running containers. You can download VS Code for your machine here: https://code.visualstudio.com/
+
+Once installed open up a VS Code Window and install the `Remote - Containers` Extension by selecting `Extensions` (four squares icon) on the left pane then searching for `Remote - Containers`. Click the install button and it will reload your window. 
+
+Next you must attach to the running container so ensure that you've completed the above steps are currently running the Docker container. Press `F1` to bring up the Command menu and search for `Attach to Running Container...` and select it. If working correctly the `footest` container should pop up and you can select it. Doing so will open a new window and in the bottom left corner in green it should read `Container footest-img:latest...`
+
+To open the directory you can open the directory container using `File` -> `Open Folder` -> `/repo`. You can run commands in the terminal using `Terminal` -> `New Terminal`
 
 ## Step 2: 15 Minutes Before the Scheduled Test time
 
