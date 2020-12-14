@@ -20,7 +20,7 @@ The test will be conducted over Microsoft Teams. You will be expected to share y
 
 #### What Happens When The Test is Done
 
-If there is time left over, please feel free to engage the test adminstrator with questions you may have about the work, environment or technology. 
+If there is time left over, please feel free to engage the test adminstrator with questions you may have about the work, environment or technology. In the `Test Instruction` we will direct you have to save your work and how to submit it to us.
 
 ## Step 1: When You Get the Test Invite Do the Following  
 
@@ -35,7 +35,7 @@ Give yourself enough time to install Docker on your machine. Once Docker is inst
 From the terminal command line type:
 
 ```bash
-$ ./instantiate-container.sh
+$ ./run-azul3d-test.sh
 ```
 
 #### Windows 10: Building the Test Container
@@ -45,7 +45,11 @@ $ ./instantiate-container.sh
 
 ## Step 2: 15 Minutes Before the Scheduled Test time
 
-The Test Moderator will post your Test to this site 15 minutes prior to the beginning of the Scheduled Test Time. We highly encourage you to perform a `pull` at that time to get the test code. Try compiling it. Look over the test requirements.
+The Test Moderator will post your Test to this site 15 minutes prior to the beginning of the Scheduled Test Time.
+
+1. ```git fetch```
+
+2. ```git checkout test```
 
 ## Step 3: Build instructions
 
