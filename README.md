@@ -35,7 +35,7 @@ Give yourself enough time to install Docker on your machine. Once Docker is inst
 From the terminal command line type:
 
 ```bash
-$ ./run-azul3d-test.sh
+$ ./instantiate-container.sh
 ```
 
 #### Windows 10: Building the Test Container
