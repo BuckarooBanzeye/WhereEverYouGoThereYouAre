@@ -51,6 +51,8 @@ The Test Moderator will post your Test to this site 15 minutes prior to the begi
 
 2. ```git checkout test```
 
+3. ```git pull origin test```
+
 ## Step 3: Build instructions
 
 All instructions are performed inside the container. At the top of the repo perform the following:
