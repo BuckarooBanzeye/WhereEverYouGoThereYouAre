@@ -20,7 +20,7 @@ The test will be conducted over Microsoft Teams. You will be expected to share y
 
 #### What Happens When The Test is Done
 
-If there is time left over, please feel free to engage the test adminstrator with questions you may have about the work, environment or technology. In the `Test Instruction` we will direct you have to save your work and how to submit it to us.
+If there is time left over, please feel free to engage the test adminstrator with questions you may have about the work, environment or technology. 
 
 ## Step 1: When You Get the Test Invite Do the Following  
 
