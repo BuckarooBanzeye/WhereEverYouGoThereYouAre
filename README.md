@@ -52,7 +52,7 @@ To grant permission to Docker to map the appropriate directory to the container 
 From the terminal command line type:
 
 ```bash
-$ ./run-azul3d-test.sh
+$ ./instantiate-container.sh
 ```
 
 #### Windows 10: Building the Test Container
