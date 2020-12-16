@@ -33,6 +33,8 @@ Give yourself enough time to install Docker on your machine. Once Docker is inst
 
 #### Windows 10: Installing Docker
 
+Note: If you are running Windows 10 Home, please skip down to the Windows 10 Home: Installing Docker instructions, as this instruction set will not work on Windows 10 Home.
+
 Follow the instructions for installation laid out here: https://docs.docker.com/docker-for-windows/
 
 This requires installing Docker Desktop. After installing and restarting your machine, Docker Desktop may prompt you with an incomplete setup due to `WSL 2`. If you already have Docker running on your machine with this feature enabled then it should not pose any problems. However, this feature is not necessary for the purpose of the test. 
@@ -47,6 +49,12 @@ If you already had Docker running using `WSL 2` then you do not need to complete
 
 To grant permission to Docker to map the appropriate directory to the container you must navigate to the Docker whale icon on the toolbar (potentially under Hidden Icons), and right-click and select `Settings`. Under `Resources` then `File Sharing` add this directory using the `+` icon.
 
+#### Windows 10 Home: Installing Docker
+
+First you should install Docker Desktop via these instructions: https://docs.docker.com/docker-for-windows/install-windows-home/ and ensure that the Enable WSL 2 Features option is enabled on the Configuration page. 
+
+Next, you should follow the instructions on this page for installing the Windows Subsystem for Linux: https://docs.microsoft.com/en-us/windows/wsl/install-win10. The instructions offer a “simplified install” which involves joining the Windows Insiders Program and the “manual install”. These instructions will follow the "manual install" process as it is not required to enroll in the Windows Insiders Program. On that page, the manual instructions start here: https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps. When you get to Step 6 – Install your Linux Distribution of choice we would recommend choosing Ubuntu 18.04 LTS. Once you have installed the Linux distribution then restart Docker Desktop. If it worked then Docker Desktop would take you through the docker-tutorial container. 
+
 #### Linux: Building the Test Container
 
 From the terminal command line type:
@@ -57,6 +65,7 @@ $ ./instantiate-container.sh
 
 #### Windows 10: Building the Test Container
 
+In an administrator PowerShell navigate to this cloned repo and type:
 ```bash
 $ .\instantiate-container.bat
 ```
